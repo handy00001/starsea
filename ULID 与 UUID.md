@@ -1,3 +1,4 @@
+[参考文档](https://mp.weixin.qq.com/s/3GWogMGe0UYPi5HLxKQlUw)
 # ULID：Universally Unique Lexicographically Sortable Identifier（通用唯一词典分类标识符）
 # UUID：Universally Unique Identifier（通用唯一标识符）
 # 为什么不选择UUID
