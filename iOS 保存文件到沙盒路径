@@ -1,0 +1,48 @@
+###  宏定义路径
+```
+#define TUIKit_DB_Path [NSHomeDirectory() stringByAppendingString:@"/Documents/com_tencent_imsdk_data/"]
+#define TUIKit_Image_Path [NSHomeDirectory() stringByAppendingString:@"/Documents/com_tencent_imsdk_data/image/"]
+
+
+
+```
+
+###  判断文件夹目录是否存在
+
+```
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:TUIKit_Image_Path]){
+        [fileManager createDirectoryAtPath:TUIKit_Image_Path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+```
+
+###  生成文件位置 这个是 TUITool里
+```
++ (NSString *)genImageName:(NSString *)uuid
+{
+    NSString *identifier = ""; // 用户ID
+    if(uuid == nil){
+        int value = arc4random() % 1000;
+        uuid = [NSString stringWithFormat:@"%ld_%d", (long)[[NSDate date] timeIntervalSince1970], value];
+    }
+    NSString *name = [NSString stringWithFormat:@"%d_%@_image_%@",verionID, identifier, uuid]; // versionID app版本号 1.0.1 = 101
+    return name;
+}
+```
+
+### 保存文件
+```
+    NSString *path = [TUIKit_Image_Path stringByAppendingString:[TUITool genImageName:nil]]; // 合成文件路径
+    // 图片数据
+    NSData *data = UIImagePNGRepresentation(image);// 图片对象 将其转化成二进制文件
+    NSLog(@"%@",path);
+    BOOL result =   [[NSFileManager defaultManager] createFileAtPath:path contents:data attributes:nil]; // 保存
+    BOOL result1 = [data writeToFile:path atomically:YES];
+    if (result) {
+        NSLog(@"保存成功");
+    }else{
+         NSLog(@"保存失败");
+    }
+
+```
+
