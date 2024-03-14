@@ -1,5 +1,6 @@
 # Jetpack Compose 布局
-
+[教程参考](https://developer.android.google.cn/jetpack/compose/tutorial?hl=zh-cn)
+[项目参考](https://github.com/android/nowinandroid?tab=readme-ov-file)
 ## Jetpack Compose 描述
 
 * Jetpack Compose 是用于构建原生 Android 界面的新工具包。它使用更少的代码、强大的工具和直观的 Kotlin API，可以帮助您简化并加快 Android 界面开发。
@@ -18,4 +19,9 @@ fun MessageCard(name: String) {
 
 ```
 ## 排列
-*** 
+```
+row
+``` 
+
+
+// 项目教程
