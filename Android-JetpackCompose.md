@@ -1,8 +1,8 @@
-# Jetpack Compose 布局
+# Jetpack Compose 布局入门
 
-* [教程参考](https://developer.android.google.cn/jetpack/compose/tutorial?hl=zh-cn)
+* [入门教程参考](https://developer.android.google.cn/jetpack/compose/tutorial?hl=zh-cn)
 * [项目参考](https://github.com/android/nowinandroid?tab=readme-ov-file)
-
+* [创建应用课程](https://developer.android.google.cn/jetpack/compose/tutorial?hl=zh-cn)
 
 ## Jetpack Compose 描述
 
@@ -21,10 +21,44 @@ fun MessageCard(name: String) {
 }
 
 ```
-## 排列
+
+## 预览
+
+*  可以多个模式预览
 ```
-row
-``` 
+@Preview(name = "Light Mode") 
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    showBackground = true,
+    name = "Dark Mode"
+)
+@Composable
+fun PreviewMessageCard() {
+
+}
+
+```
+
+## 单元布局 
+* Row  横向排列
+* Column 纵向排列
+* Box 重叠
+* Space 间隔
+* 
+
+## 页面布局 
+* 竖向列表布局 
+* 横向列表布局
+* 顶部导航布局
+* 底部导航布局
 
 
-// 项目教程
+## 拓展阅读
+* [资源管理器](https://developer.android.google.cn/studio/write/resource-manager)
+* [material3 应用于安卓的Api](https://developer.android.google.cn/reference/kotlin/androidx/compose/material3/package-summary)
+* [material3 设计网](https://m3.material.io/foundations)
+* [material1 设计网](https://m1.material.io/platforms/platform-adaptation.html#platform-adaptation-platform-recommendations)
+* [material2](https://m2.material.io)
+
+
+
