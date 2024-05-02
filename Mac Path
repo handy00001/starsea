@@ -1,0 +1,32 @@
+# Mac Path
+```
+Mac OSX中的路径分为绝对路径和相对路径两种形式。绝对路径是指从根目录开始写起的完整路径，而相对路径则是指文件与目录的相对位置关系。
+
+例如：
+
+/：根目录
+
+/Users：当前有一个名为“Users”的目录，它是在根目录下的一个子目录。
+
+/Users/
+𝑈
+𝑆
+𝐸
+𝑅
+/
+𝐷
+𝑜
+𝑤
+𝑛
+𝑙
+𝑜
+𝑎
+𝑑
+𝑠
+：
+USER/Downloads：USER 是一个环境变量，表示你的用户名，这是一个绝对路径。在这个例子中，Downloads 是一个在你的 home 目录下的子目录。
+
+另外， ~ 代表你的主目录，也就是 /Users/your-username。比如，~/Downloads 是 /Users/your-username/Downloads 的缩写。
+
+在命令行中，可以使用 cd 命令改变目录。比如，输入 cd ~/Downloads 将会进入你的 Downloads 目录。
+```
