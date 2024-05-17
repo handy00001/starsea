@@ -1,6 +1,18 @@
 # Go bee go
 
-## 安装 
+## 安装 go 成功后，查看环境变量
+```
+go env
+
+```
+
+
+## 安装gobee
+```
+go install github.com/beego/bee/v2@latest
+
+```
+
 
 
 
